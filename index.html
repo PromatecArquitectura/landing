@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="PROMATEC Arquitectura — Tus ideas, nuestros espacios. Nueva web en construcción.">
+  <meta name="theme-color" content="#182b33">
+  <title>PROMATEC Arquitectura | Nueva web</title>
+
+  <style>
+    :root {
+      --white: #ffffff;
+      --text-soft: rgba(255,255,255,.88);
+      --text-muted: rgba(255,255,255,.72);
+      --line: rgba(255,255,255,.45);
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      width: 100%;
+      min-height: 100%;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #182b33;
+    }
+
+    body {
+      min-height: 100vh;
+      color: var(--white);
+      overflow-x: hidden;
+    }
+
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      isolation: isolate;
+      background:
+        linear-gradient(180deg, rgba(12, 22, 26, .40), rgba(12, 22, 26, .64)),
+        url("oficina-promatec.jpg") center center / cover no-repeat;
+    }
+
+    /* Subtle darkening for readability; the photo itself is not altered. */
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        90deg,
+        rgba(9, 17, 20, .18),
+        rgba(9, 17, 20, .04) 50%,
+        rgba(9, 17, 20, .22)
+      );
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    .content {
+      width: min(900px, 92vw);
+      padding: 52px 24px 42px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-shadow: 0 2px 14px rgba(0,0,0,.38);
+    }
+
+    .logo {
+      width: min(410px, 76vw);
+      height: auto;
+      max-height: 220px;
+      object-fit: contain;
+      margin-bottom: 28px;
+      filter: drop-shadow(0 8px 20px rgba(0,0,0,.25));
+    }
+
+    .tagline {
+      margin: 0;
+      font-size: clamp(2rem, 4.2vw, 3.55rem);
+      line-height: .98;
+      letter-spacing: .055em;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .divider {
+      width: 92px;
+      height: 1px;
+      margin: 30px auto 22px;
+      background: var(--line);
+    }
+
+    .status {
+      margin: 0;
+      font-size: clamp(1.15rem, 2vw, 1.5rem);
+      font-weight: 400;
+    }
+
+    .message {
+      margin: 13px auto 0;
+      max-width: 640px;
+      color: var(--text-soft);
+      font-size: clamp(.95rem, 1.55vw, 1.12rem);
+      line-height: 1.55;
+    }
+
+    .footer {
+      margin-top: 38px;
+      color: var(--text-muted);
+      font-size: .78rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 700px) {
+      .hero {
+        min-height: 100svh;
+        background-position: 58% center;
+      }
+
+      .content {
+        padding: 34px 20px 30px;
+      }
+
+      .logo {
+        width: min(340px, 82vw);
+        margin-bottom: 24px;
+      }
+
+      .tagline {
+        font-size: clamp(1.65rem, 8vw, 2.4rem);
+        letter-spacing: .035em;
+      }
+
+      .divider {
+        margin: 24px auto 18px;
+      }
+
+      .message {
+        max-width: 92vw;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="hero">
+    <section class="content" aria-label="PROMATEC Arquitectura">
+      <img
+        class="logo"
+        src="logo-promatec.png"
+        alt="PROMATEC Arquitectura"
+      >
+
+      <h1 class="tagline">Tus ideas,<br>nuestros espacios</h1>
+
+      <div class="divider" aria-hidden="true"></div>
+
+      <p class="status">Nueva web en construcción</p>
+
+      <p class="message">
+        Estamos preparando nuestra nueva web.<br>
+        Muy pronto podrás conocer nuestros proyectos y servicios.
+      </p>
+
+      <div class="footer">PROMATEC Arquitectura</div>
+    </section>
+  </main>
+</body>
+</html>
